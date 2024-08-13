@@ -46,7 +46,7 @@ signed main(){
         ofstream cout(fileInp);
         if (cout) {
             // Code sinh test
-            
+            $0
 
             cerr << "Tệp đã được tạo và ghi thành công: " << fileInp << "\n";
         } else {
