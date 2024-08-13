@@ -1,10 +1,8 @@
 #ifndef DEBUG_TEMPLATE_CPP
 #define DEBUG_TEMPLATE_CPP
-#include <bits/stdc++.h>
 // #define cerr cout
 namespace __DEBUG_UTIL__
 {
-    using namespace std;
     /* Primitive Datatypes Print */
     void print(const char *x) { cerr << x; }
     void print(bool x) { cerr << (x ? "T" : "F"); }
