@@ -6,6 +6,7 @@
 using namespace std;
 
 const int maxn = 2e5 + 5;
+const int LOG = __lg(maxn);
 const int MOD = 1e9 + 7;
 const int INF = 1e9 + 5;
 
