@@ -15,13 +15,7 @@ signed main(){
 
     srand(time(nullptr));
 
-    int n = rd(1, 100000);
-    cout << n << "\n";
-    for (int i = 1; i <= n; i++){
-        int ok = rd(1, 2);
-        if (ok == 1) cout << -rd(0, 32000); else cout << rd(0, 32000);
-        cout << " ";
-    }
+    
 
     return 0;
 }
