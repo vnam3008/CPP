@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+long long d[maxn];
+vector <pair<int, int>> g[maxn];
+
+void Init(){
+    for (int i = 0; i < maxn; i++){
+        d[i] = INF;
+        g[i].clear();
+    }
+}
+
+void Dijkstra(int s){
+    priority_queue <pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
+    d[s] = 0;
+    pq.push({0, s});
+
+    while (pq.size()){
+        long long du = pq.top().first;
+        int u = pq.top().second;
+        pq.pop();
+        if (du != d[u]) continue;
+        for (auto &x: g[u]){
+            int v = x.first;
+            int w = x.second;
+            if (d[v] > d[u] + w){
+                d[v] = d[u] + w;
+                pq.push({d[v], v});
+            }
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Dijkstra</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
